@@ -52,3 +52,5 @@
     window.open(waLink, "_blank");
   });
 });
+
+function kirimEmail() {
