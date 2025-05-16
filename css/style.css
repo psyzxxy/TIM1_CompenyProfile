@@ -17,7 +17,7 @@ html {
 }
 
 body {
-  font-family: "Poppins", sans-serif;
+  font-family: "Poppins", "Railway", sans-serif;
   background-color: var(--bg);
   color: #fff;
 }
@@ -110,6 +110,7 @@ body {
     rgba(255, 255, 255, 0) 50%
   );
 }
+
 .hero .content {
   padding: 1.4rem 7%;
   max-width: 60rem;
@@ -146,7 +147,86 @@ body {
   box-shadow: 1px 1px 3px rgba(1, 1, 3, 0.5);
   border-radius: 40px;
 }
+
 .hero .content .cta:hover {
   transform: scale(1.05);
   border: 2px solid var(--primary);
+}
+
+section {
+  width: 100%;
+  height: 100vh;
+  max-height: fit-content;
+  margin-top: 10vh;
+}
+
+.section-title {
+  width: 90%;
+  text-align: center;
+  margin: 0 auto 2rem auto;
+  font-size: 3rem;
+  text-shadow: 1px 1px 3px rgba(1, 1, 3, 0.5);
+  line-height: 1;
+}
+
+.about {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5rem;
+  margin: auto;
+}
+
+.about p {
+  width: 80%;
+  font-size: 1.5rem;
+}
+
+.service {
+  display: flex;
+}
+
+.service h1 {
+  text-align: center;
+}
+
+.service-img {
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  background-image: url("../assets/images/000000.png&text=Background+Image+380x537.5.png");
+  position: relative;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.service-img p {
+  width: 90%;
+  color: var(--bg);
+  margin: auto;
+}
+
+.service-list {
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+  justify-content: space-evenly;
+}
+
+.service-list ul li {
+  list-style: none;
+}
+
+.card {
+  border-radius: 1rem;
+  box-shadow: 0 8px 32px rgba(255, 255, 255, 1);
+  width: 90%;
+  height: 15vh;
+}
+
+.card p {
+  margin: 2rem auto;
 }
