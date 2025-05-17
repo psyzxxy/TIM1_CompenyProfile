@@ -1,58 +1,74 @@
-//timer
-    function startCountdown(duration, display) {
-      let timer = duration, hours, minutes, seconds;
-      setInterval(() => {
-        hours = Math.floor(timer / 3600);
-        minutes = Math.floor((timer % 3600) / 60);
-        seconds = timer % 60;
+  document.addEventListener("DOMContentLoaded", function () {
+  
 
-        display.textContent = `${hours.toString().padStart(2, '0')}:${
-          minutes.toString().padStart(2, '0')}:${
-          seconds.toString().padStart(2, '0')}`;
+emailjs.init("2GAhWzEnLOer6GJhm"); // Ganti dengan public key dari EmailJS
 
-        if (--timer < 0) timer = 0;
-      }, 1000);
-    }
+  const form = document.getElementById("contactForm");
+  const status = document.getElementById("statusMessage");
 
-    window.onload = () => {
-      const countdownDisplay = document.getElementById('timer');
-      startCountdown(86400, countdownDisplay); // 24 jam dalam detik
-    }
- 
-    document.addEventListener("DOMContentLoaded", () => {
-  console.log("Website Moemtaz siap!");
-
-  const nameInput = document.getElementById("name");
-  const emailInput = document.getElementById("email");
-  const messageInput = document.getElementById("message");
-  const sendEmailBtn = document.getElementById("sendEmail");
-  const sendWABtn = document.getElementById("sendWA");
-
-  // Kirim Email
-  sendEmailBtn.addEventListener("click", (e) => {
+  form.addEventListener("submit", function (e) {
     e.preventDefault();
-    const name = nameInput.value.trim();
-    const email = emailInput.value.trim();
-    const message = messageInput.value.trim();
 
-    const mailtoLink = `mailto:info@moemtaz.id?subject=Pesan dari ${name}&body=Nama: ${name}%0AEmail: ${email}%0APesan: ${message}`;
-    window.location.href = mailtoLink;
-  });
+    const name = document.getElementById("name").value.trim();
+    const email = document.getElementById("email").value.trim();
+    const subject = document.getElementById("subject").value.trim();
+    const message = document.getElementById("message").value.trim();
 
-  // Kirim WhatsApp
-  sendWABtn.addEventListener("click", () => {
-    const name = nameInput.value.trim();
-    const email = emailInput.value.trim();
-    const message = messageInput.value.trim();
+    if (!name || !email || !subject || !message) {
+      status.textContent = "Mohon isi semua field.";
+      status.style.color = "red";
+      return;
+    }
 
-    const fullMessage = `Halo Moemtaz,%0ASaya ${name} (${email}) ingin menyampaikan:%0A${message}`;
-    const phone = "6281234567890"; // Ganti dengan nomor WhatsApp Moemtaz
-    const waLink = `https://wa.me/${phone}?text=${encodeURIComponent(fullMessage)}`;
+    const templateParams = {
+      from_name: name,
+      from_email: email,
+      subject: subject,
+      message: message
+    };
 
-    window.open(waLink, "_blank");
+    emailjs.send("landingpage", "template_zy5trxl", templateParams)
+      .then(() => {
+        status.textContent = "Pesan berhasil dikirim via Email!";
+        status.style.color = "green";
+        form.reset();
+      })
+      .catch((error) => {
+        console.error("EmailJS Error:", error);
+        status.textContent = "Gagal mengirim email.";
+        status.style.color = "red";
+      });
   });
 });
 
+
+
+  // Kirim WhatsApp
+ function sendWhatsApp() {
+  const name = document.getElementById("name").value.trim();
+  const email = document.getElementById("email").value.trim();
+  const subject = document.getElementById("subject").value.trim();
+  const message = document.getElementById("message").value.trim();
+  const statusMsg = document.getElementById("statusMessage");
+S
+  if (!name || !email || !subject || !message) {
+    statusMsg.textContent = "Mohon lengkapi semua field.";
+    statusMsg.style.color = "red";
+    return;
+  }
+
+  // Ganti dengan nomor WA tujuan (tanpa + dan tanpa spasi, gunakan format internasional)
+  const phone = "6281220869603S";
+
+  // Susun isi pesan
+  const waMessage = `Halo Moemtaz 👋%0ASaya ${name} (${email}) ingin menyampaikan:%0A%0ASubjek: ${subject}%0APesan: ${message}`;
+
+  
+  const waLink = `https://wa.me/${phone}?text=${waMessage}`;
+
+ 
+  window.open(waLink, '_blank');
+}
 window.addEventListener("scroll", function () {
         const navbar = document.querySelector(".navbar");
         if (window.scrollY > 50) {
