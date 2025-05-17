@@ -29,13 +29,35 @@ body {
   justify-content: space-between;
   align-items: center;
   padding: 1.4rem 7%;
-  background-color: #081f5c;
-  border-bottom: 1px solid #785a3b;
+  background-color: transparent;
+  border-bottom: none;
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
   z-index: 9999;
+  ransition: background-color 0.3s ease, border-bottom 0.3s ease;
+}
+
+.navbar.transparent {
+  background-color: transparent;
+  border-bottom: none;
+  transition: background-color 0.3s ease, border-bottom 0.3s ease;
+}
+
+.navbar.transparent .navbar-nav a,
+.navbar.transparent .navbar-logo {
+  color: var(--primary);
+}
+
+.navbar.solid {
+  background-color: #081f5c; /* warna solid biru */
+  border-bottom: 1px solid #785a3b;
+}
+
+.navbar.solid a,
+.navbar.solid .navbar-logo {
+  color: white;
 }
 
 .navbar .navbar-logo {
@@ -43,6 +65,12 @@ body {
   font-weight: 700;
   color: #fff;
   font-style: italic;
+}
+
+.navbar,
+.navbar a,
+.navbar .navbar-logo {
+  transition: all 0.3s ease;
 }
 
 .navbar .navbar-logo span {
@@ -154,7 +182,7 @@ body {
   border: 2px solid var(--primary);
 }
 
-section {
+.section {
   width: 100%;
   height: 100vh;
   max-height: fit-content;

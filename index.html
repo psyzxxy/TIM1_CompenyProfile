@@ -8,7 +8,7 @@
   </head>
   <body>
     <!-- Navbar Start -->
-    <nav class="navbar">
+    <nav class="navbar" class="navbar transparant">
       <a href="#" class="navbar-logo"><span>Moemtaz</span> Group.</a>
       <div class="navbar-nav">
         <a href="#home">Home</a>
@@ -182,5 +182,40 @@
       </div>
     </section>
     <!--Contact Section END-->
+    <!--Navbar Js START-->
+    <script>
+      window.addEventListener("scroll", function () {
+        const navbar = document.querySelector(".navbar");
+        if (window.scrollY > 50) {
+          navbar.classList.add("solid");
+          navbar.classList.remove("transparent");
+        } else {
+          navbar.classList.add("transparent");
+          navbar.classList.remove("solid");
+        }
+      });
+
+      document.addEventListener("DOMContentLoaded", () => {
+        const navbar = document.querySelector(".navbar");
+        if (window.scrollY > 50) {
+          navbar.classList.add("solid");
+        } else {
+          navbar.classList.add("transparent");
+        }
+      });
+      /*Navbar-nav*/
+      window.addEventListener("scroll", function () {
+        const navbar = document.querySelector(".navbar");
+        if (window.scrollY > 50) {
+          navbar.classList.remove("transparent");
+          navbar.classList.add("solid");
+        } else {
+          navbar.classList.add("transparent");
+          navbar.classList.remove("solid");
+        }
+      });
+    </script>
+
+    <!--Navbar Js END-->
   </body>
 </html>
