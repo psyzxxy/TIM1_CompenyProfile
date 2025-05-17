@@ -52,3 +52,34 @@
     window.open(waLink, "_blank");
   });
 });
+
+window.addEventListener("scroll", function () {
+        const navbar = document.querySelector(".navbar");
+        if (window.scrollY > 50) {
+          navbar.classList.add("solid");
+          navbar.classList.remove("transparent");
+        } else {
+          navbar.classList.add("transparent");
+          navbar.classList.remove("solid");
+        }
+      });
+
+      document.addEventListener("DOMContentLoaded", () => {
+        const navbar = document.querySelector(".navbar");
+        if (window.scrollY > 50) {
+          navbar.classList.add("solid");
+        } else {
+          navbar.classList.add("transparent");
+        }
+      });
+      /*Navbar-nav*/
+      window.addEventListener("scroll", function () {
+        const navbar = document.querySelector(".navbar");
+        if (window.scrollY > 50) {
+          navbar.classList.remove("transparent");
+          navbar.classList.add("solid");
+        } else {
+          navbar.classList.add("transparent");
+          navbar.classList.remove("solid");
+        }
+      });
