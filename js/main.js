@@ -1,7 +1,7 @@
-  document.addEventListener("DOMContentLoaded", function () {
-  
+//Email??
+document.addEventListener("DOMContentLoaded", function () {
 
-emailjs.init("2GAhWzEnLOer6GJhm"); // Ganti dengan public key dari EmailJS
+  emailjs.init("2GAhWzEnLOer6GJhm"); // Ganti dengan public key dari EmailJS
 
   const form = document.getElementById("contactForm");
   const status = document.getElementById("statusMessage");
@@ -43,14 +43,14 @@ emailjs.init("2GAhWzEnLOer6GJhm"); // Ganti dengan public key dari EmailJS
 
 
 
-  // Kirim WhatsApp
- function sendWhatsApp() {
+// Kirim WhatsApp
+function sendWhatsApp() {
   const name = document.getElementById("name").value.trim();
   const email = document.getElementById("email").value.trim();
   const subject = document.getElementById("subject").value.trim();
   const message = document.getElementById("message").value.trim();
   const statusMsg = document.getElementById("statusMessage");
-S
+  S
   if (!name || !email || !subject || !message) {
     statusMsg.textContent = "Mohon lengkapi semua field.";
     statusMsg.style.color = "red";
@@ -63,39 +63,42 @@ S
   // Susun isi pesan
   const waMessage = `Halo Moemtaz 👋%0ASaya ${name} (${email}) ingin menyampaikan:%0A%0ASubjek: ${subject}%0APesan: ${message}`;
 
-  
+
   const waLink = `https://wa.me/${phone}?text=${waMessage}`;
 
- 
+
   window.open(waLink, '_blank');
 }
-window.addEventListener("scroll", function () {
-        const navbar = document.querySelector(".navbar");
-        if (window.scrollY > 50) {
-          navbar.classList.add("solid");
-          navbar.classList.remove("transparent");
-        } else {
-          navbar.classList.add("transparent");
-          navbar.classList.remove("solid");
-        }
-      });
 
-      document.addEventListener("DOMContentLoaded", () => {
-        const navbar = document.querySelector(".navbar");
-        if (window.scrollY > 50) {
-          navbar.classList.add("solid");
-        } else {
-          navbar.classList.add("transparent");
-        }
-      });
-      /*Navbar-nav*/
-      window.addEventListener("scroll", function () {
-        const navbar = document.querySelector(".navbar");
-        if (window.scrollY > 50) {
-          navbar.classList.remove("transparent");
-          navbar.classList.add("solid");
-        } else {
-          navbar.classList.add("transparent");
-          navbar.classList.remove("solid");
-        }
-      });
+//Scroll
+window.addEventListener("scroll", function () {
+  const navbar = document.querySelector(".navbar");
+  if (window.scrollY > 50) {
+    navbar.classList.add("solid");
+    navbar.classList.remove("transparent");
+  } else {
+    navbar.classList.add("transparent");
+    navbar.classList.remove("solid");
+  }
+});
+
+document.addEventListener("DOMContentLoaded", () => {
+  const navbar = document.querySelector(".navbar");
+  if (window.scrollY > 50) {
+    navbar.classList.add("solid");
+  } else {
+    navbar.classList.add("transparent");
+  }
+});
+
+//Navbar-nav
+window.addEventListener("scroll", function () {
+  const navbar = document.querySelector(".navbar");
+  if (window.scrollY > 50) {
+    navbar.classList.remove("transparent");
+    navbar.classList.add("solid");
+  } else {
+    navbar.classList.add("transparent");
+    navbar.classList.remove("solid");
+  }
+});
