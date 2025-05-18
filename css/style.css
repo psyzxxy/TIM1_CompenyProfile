@@ -391,6 +391,7 @@ input[type="radio"] {
 
 /* Footer */
 footer {
+  margin-top: 2.8125rem;
   display: flex;
   gap: 2.5rem;
   justify-content: space-between;
