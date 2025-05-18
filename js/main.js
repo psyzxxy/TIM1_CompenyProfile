@@ -1,6 +1,5 @@
 //Email??
 document.addEventListener("DOMContentLoaded", function () {
-
   emailjs.init("2GAhWzEnLOer6GJhm"); // Ganti dengan public key dari EmailJS
 
   const form = document.getElementById("contactForm");
@@ -24,10 +23,11 @@ document.addEventListener("DOMContentLoaded", function () {
       from_name: name,
       from_email: email,
       subject: subject,
-      message: message
+      message: message,
     };
 
-    emailjs.send("landingpage", "template_zy5trxl", templateParams)
+    emailjs
+      .send("landingpage", "template_zy5trxl", templateParams)
       .then(() => {
         status.textContent = "Pesan berhasil dikirim via Email!";
         status.style.color = "green";
@@ -41,8 +41,6 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
-
-
 // Kirim WhatsApp
 function sendWhatsApp() {
   const name = document.getElementById("name").value.trim();
@@ -50,7 +48,7 @@ function sendWhatsApp() {
   const subject = document.getElementById("subject").value.trim();
   const message = document.getElementById("message").value.trim();
   const statusMsg = document.getElementById("statusMessage");
-  S
+  S;
   if (!name || !email || !subject || !message) {
     statusMsg.textContent = "Mohon lengkapi semua field.";
     statusMsg.style.color = "red";
@@ -63,11 +61,9 @@ function sendWhatsApp() {
   // Susun isi pesan
   const waMessage = `Halo Moemtaz 👋%0ASaya ${name} (${email}) ingin menyampaikan:%0A%0ASubjek: ${subject}%0APesan: ${message}`;
 
-
   const waLink = `https://wa.me/${phone}?text=${waMessage}`;
 
-
-  window.open(waLink, '_blank');
+  window.open(waLink, "_blank");
 }
 
 //Scroll
@@ -100,5 +96,20 @@ window.addEventListener("scroll", function () {
   } else {
     navbar.classList.add("transparent");
     navbar.classList.remove("solid");
+  }
+});
+//toggle class active
+const navbarnav = document.querySelector(".navbar-nav");
+// ketika hamburger menu di klik
+document.querySelector("#hamburger-menu").onclick = () => {
+  navbarnav.classList.toggle("active");
+};
+
+// Klik diluar sidebar unutk menghilangkan nav
+const hamburger = document.querySelector("#hamburger-menu");
+
+document.addEventListener("click", function (e) {
+  if (!hamburger.contains(e.target) && !navbarnav.contains(e.target)) {
+    navbarnav.classList.remove("active");
   }
 });
