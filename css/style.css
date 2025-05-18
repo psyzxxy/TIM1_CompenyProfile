@@ -452,7 +452,7 @@ footer .social-media li a {
     position: absolute;
     top: 100%;
     right: -100%;
-    background-color: #fff;
+    background-color: var(--galaxy);
     width: 30rem;
     height: 100vh;
     transition: 0.3s;
