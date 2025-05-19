@@ -42,29 +42,19 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 // Kirim WhatsApp
-function sendWhatsApp() {
-  const name = document.getElementById("name").value.trim();
-  const email = document.getElementById("email").value.trim();
-  const subject = document.getElementById("subject").value.trim();
-  const message = document.getElementById("message").value.trim();
-  const statusMsg = document.getElementById("statusMessage");
-  S;
-  if (!name || !email || !subject || !message) {
-    statusMsg.textContent = "Mohon lengkapi semua field.";
-    statusMsg.style.color = "red";
-    return;
-  }
+document.addEventListener("DOMContentLoaded", function () {
+  const whatsappBtn = document.getElementById("whatsappLink");
 
-  // Ganti dengan nomor WA tujuan (tanpa + dan tanpa spasi, gunakan format internasional)
-  const phone = "6281220869603S";
+  const nomorWhatsApp = "6281220869603"; // Ganti dengan nomor WA kamu (format internasional, tanpa +)
+  const pesanDefault = "Halo, saya tertarik dengan layanan Moemtaz.";
 
-  // Susun isi pesan
-  const waMessage = `Halo Moemtaz 👋%0ASaya ${name} (${email}) ingin menyampaikan:%0A%0ASubjek: ${subject}%0APesan: ${message}`;
+  whatsappBtn.addEventListener("click", function (e) {
+    e.preventDefault();
+    const link = `https://wa.me/${nomorWhatsApp}?text=${encodeURIComponent(pesanDefault)}`;
+    window.open(link, "_blank"); // Buka di tab baru
+  });
+});
 
-  const waLink = `https://wa.me/${phone}?text=${waMessage}`;
-
-  window.open(waLink, "_blank");
-}
 
 //Scroll
 window.addEventListener("scroll", function () {

@@ -196,6 +196,7 @@ section {
   max-height: fit-content;
   min-height: max-content;
   margin-top: 10vh;
+  height: -moz-fit-content;
 }
 
 .section-title {
@@ -265,6 +266,7 @@ input[type="radio"] {
 
 .accordion input[type="radio"]:checked + label + .service-content {
   max-height: fit-content;
+  height: -moz-fit-content;
   padding: 1.5rem 1.5rem 2rem;
 }
 
@@ -281,7 +283,8 @@ input[type="radio"] {
 
 .card {
   border-radius: 1rem;
-  box-shadow: 0 8px 32px var(--venus);
+  box-shadow: 0 8px 32px var(--meteor);
+  background-color: var(--universe);
   width: 45%;
   height: 15vh;
   margin: 0.5rem;
@@ -391,6 +394,11 @@ input[type="radio"] {
 
 /* Footer */
 footer {
+  background: linear-gradient(
+    180deg,
+    rgba(8, 31, 92, 1) 30%,
+    rgba(51, 78, 172, 1) 95%
+  );
   margin-top: 2.8125rem;
   display: flex;
   gap: 2.5rem;
@@ -398,11 +406,11 @@ footer {
 }
 
 .footer {
-  margin-bottom: 40%;
   width: 30%;
   height: 50vh;
   min-height: max-content;
   max-height: fit-content;
+  height: -moz-fit-content;
 }
 
 footer .copyright p {
@@ -432,6 +440,8 @@ footer .social-media li a {
   color: var(--milkyway);
   font-size: 1.875rem;
 }
+
+
 /* Media Queries */
 
 /* Laptop */
