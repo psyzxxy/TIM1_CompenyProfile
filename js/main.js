@@ -103,3 +103,38 @@ document.addEventListener("click", function (e) {
     navbarnav.classList.remove("active");
   }
 });
+
+// ========== Scroll to Top Button ==========
+const scrollTopBtn = document.getElementById("scrollTop");
+
+window.addEventListener("scroll", () => {
+  if (scrollTopBtn) {
+    scrollTopBtn.style.display = window.scrollY > 300 ? "block" : "none";
+  }
+});
+
+if (scrollTopBtn) {
+  scrollTopBtn.addEventListener("click", () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  });
+}
+
+// ========== AOS Init ==========
+document.addEventListener("DOMContentLoaded", function () {
+  AOS.init({
+    duration: 800,
+    once: true,
+  });
+});
+
+// ========== Breakpoint Resize Detection ==========
+window.addEventListener("resize", () => {
+  const w = window.innerWidth;
+  if (w < 768) {
+    console.log("Small screen (<768px)");
+  } else if (w < 1024) {
+    console.log("Medium screen");
+  } else {
+    console.log("Large screen");
+  }
+});
