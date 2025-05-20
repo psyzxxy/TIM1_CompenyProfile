@@ -11,6 +11,11 @@
   <title>Moemtaz Group</title>
   <!-- Feather Icon -->
   <script src="https://unpkg.com/feather-icons"></script>
+  <!-- AOS CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css"
+      rel="stylesheet"
+    />
 </head>
 
 <body>
@@ -44,7 +49,7 @@
   <!-- Hero Section END -->
 
   <!-- About Section Start -->
-  <section id="about">
+  <section id="about" data-aos="fade-up">
     <h1 class="section-title">Tentang Kami</h1>
     <div class="about">
       <p>
@@ -64,7 +69,7 @@
   <!-- About Section End-->
 
   <!-- Services Section Start -->
-  <section id="service">
+  <section id="service" data-aos="fade-up">
     <ul class="accordion">
       <li>
         <input type="radio" name="accordion" id="layanan" checked>
@@ -185,7 +190,7 @@
   <!-- Services Section End -->
 
   <!--Contact Section START-->
-  <section class="contact section" id="contact">
+  <section class="contact section" id="contact" data-aos="fade-up">
     <div class="container">
       <div class="row">
         <div class="section-title padd-15" data-aos="fade-up">
@@ -273,6 +278,11 @@
   <!-- Feather Icon -->
   <script>
     feather.replace();
+  </script>
+  <!-- AOS JS -->
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script>
+      AOS.init();
   </script>
 </body>
 
