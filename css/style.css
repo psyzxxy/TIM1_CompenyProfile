@@ -385,6 +385,7 @@ input[type="radio"] {
   padding: 0 50px;
   border-radius: 10px;
   background-color: var(--sky);
+  color: #010101;
 }
 
 .contact .contact-form .cta:hover {
@@ -440,7 +441,20 @@ footer .social-media li a {
   color: var(--milkyway);
   font-size: 1.875rem;
 }
+.footer.social-media {
+  text-align: center;
+}
 
+.footer.social-media ul {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  padding: 0;
+  list-style: none;
+}
+.footer.social-media ul li {
+  display: inline-block;
+}
 
 /* Media Queries */
 
@@ -488,5 +502,21 @@ footer .social-media li a {
   .contact .contact-info-item {
     flex: 0 0 100%;
     max-width: 100%;
+  }
+  footer {
+    flex-direction: row;
+    justify-content: space-between;
+    text-align: left;
+    align-items: flex-start;
+  }
+
+  .footer.social-media {
+    text-align: right;
+  }
+}
+/* Handphone */
+@media (max-width: 450px) {
+  html {
+    font-size: 55%;
   }
 }

@@ -8,6 +8,9 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css"
     integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <title>Moemtaz Group</title>
   <!-- Feather Icon -->
   <script src="https://unpkg.com/feather-icons"></script>
@@ -34,10 +37,9 @@
     
   </nav>
   <!-- Navbar End -->
-
   <!-- Hero Section Start -->
-  <selection class="hero" id="home">
-    <main class="content">
+  <selection class="hero" id="home" data-aos="fade-up">
+    <main class="content" >
       <h1>Selamat Datang di <br><span>Moemtaz</span> Group.</h1>
       <p>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. At, sapiente?
@@ -45,13 +47,11 @@
       <a href="#about" class="cta">Tentang Kami</a>
     </main>
   </selection>
-
   <!-- Hero Section END -->
-
   <!-- About Section Start -->
-  <section id="about" data-aos="fade-up">
+  <section id="about">
     <h1 class="section-title">Tentang Kami</h1>
-    <div class="about">
+    <div class="about" data-aos="zoom-in" data-aos-delay="100">
       <p>
         Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatem
         cumque tempora ducimus veniam ipsum? Sequi earum aliquam enim
@@ -67,15 +67,14 @@
     </div>
   </section>
   <!-- About Section End-->
-
   <!-- Services Section Start -->
-  <section id="service" data-aos="fade-up">
+  <section id="service">
     <ul class="accordion">
       <li>
         <input type="radio" name="accordion" id="layanan" checked>
         <label for="layanan">Layanan Kami</label>
         <div class="service-content">
-          <div class="card">
+          <div class="card" data-aos="zoom-in" data-aos-delay="150">
             <p>
               Lorem ipsum dolor sit amet consectetur, adipisicing elit. Deleniti
               quibusdam iure, accusantium ex nostrum sed, autem laboriosam
@@ -83,7 +82,7 @@
               molestias praesentium at illo. Quas?
             </p>
           </div>
-          <div class="card">
+          <div class="card" data-aos="zoom-in" data-aos-delay="150">
             <p>
               Lorem ipsum dolor sit amet consectetur, adipisicing elit. Deleniti
               quibusdam iure, accusantium ex nostrum sed, autem laboriosam
@@ -91,7 +90,7 @@
               molestias praesentium at illo. Quas?
             </p>
           </div>
-          <div class="card">
+          <div class="card" data-aos="zoom-in" data-aos-delay="200">
             <p>
               Lorem ipsum dolor sit amet consectetur, adipisicing elit. Deleniti
               quibusdam iure, accusantium ex nostrum sed, autem laboriosam
@@ -99,7 +98,7 @@
               molestias praesentium at illo. Quas?
             </p>
           </div>
-          <div class="card">
+          <div class="card" data-aos="zoom-in" data-aos-delay="100">
             <p>
               Lorem ipsum dolor sit amet consectetur, adipisicing elit. Deleniti
               quibusdam iure, accusantium ex nostrum sed, autem laboriosam
@@ -107,7 +106,7 @@
               molestias praesentium at illo. Quas?
             </p>
           </div>
-          <div class="card">
+          <div class="card" data-aos="zoom-in" data-aos-delay="100">
             <p>
               Lorem ipsum dolor sit amet consectetur, adipisicing elit. Deleniti
               quibusdam iure, accusantium ex nostrum sed, autem laboriosam
@@ -118,10 +117,10 @@
         </div>
       </li>
       <li>
-        <input type="radio" name="accordion" id="benefit">
+        <input type="radio" name="accordion" id="benefit" data-aos="fade-up">
         <label for="benefit">Keunggulan Kami</label>
         <div class="service-content">
-          <div class="card">
+          <div class="card" data-aos="zoom-in" data-aos-delay="200">
             <p>
               Lorem ipsum dolor sit amet consectetur, adipisicing elit. Deleniti
               quibusdam iure, accusantium ex nostrum sed, autem laboriosam
@@ -129,7 +128,7 @@
               molestias praesentium at illo. Quas?
             </p>
           </div>
-          <div class="card">
+          <div class="card" data-aos="zoom-in" data-aos-delay="200">
             <p>
               Lorem ipsum dolor sit amet consectetur, adipisicing elit. Deleniti
               quibusdam iure, accusantium ex nostrum sed, autem laboriosam
@@ -137,7 +136,7 @@
               molestias praesentium at illo. Quas?
             </p>
           </div>
-          <div class="card">
+          <div class="card" data-aos="zoom-in" data-aos-delay="200">
             <p>
               Lorem ipsum dolor sit amet consectetur, adipisicing elit. Deleniti
               quibusdam iure, accusantium ex nostrum sed, autem laboriosam
@@ -145,7 +144,7 @@
               molestias praesentium at illo. Quas?
             </p>
           </div>
-          <div class="card">
+          <div class="card" data-aos="zoom-in" data-aos-delay="200">
             <p>
               Lorem ipsum dolor sit amet consectetur, adipisicing elit. Deleniti
               quibusdam iure, accusantium ex nostrum sed, autem laboriosam
@@ -156,10 +155,10 @@
         </div>
       </li>
       <li>
-        <input type="radio" name="accordion" id="testimoni">
+        <input type="radio" name="accordion" id="testimoni" data-aos="fade-up">
         <label for="testimoni">Testimoni</label>
-        <div class="service-content">
-          <div class="card">
+        <div class="service-content" data-aos="fade-up">
+          <div class="card"data-aos="zoom-in" data-aos-delay="200">
             <p>
               Lorem ipsum dolor sit amet consectetur, adipisicing elit. Deleniti
               quibusdam iure, accusantium ex nostrum sed, autem laboriosam
@@ -167,7 +166,7 @@
               molestias praesentium at illo. Quas?
             </p>
           </div>
-          <div class="card">
+          <div class="card" data-aos="zoom-in" data-aos-delay="200">
             <p>
               Lorem ipsum dolor sit amet consectetur, adipisicing elit. Deleniti
               quibusdam iure, accusantium ex nostrum sed, autem laboriosam
@@ -175,7 +174,7 @@
               molestias praesentium at illo. Quas?
             </p>
           </div>
-          <div class="card">
+          <div class="card" data-aos="zoom-in" data-aos-delay="200">
             <p>
               Lorem ipsum dolor sit amet consectetur, adipisicing elit. Deleniti
               quibusdam iure, accusantium ex nostrum sed, autem laboriosam
@@ -188,26 +187,25 @@
     </ul>
   </section>
   <!-- Services Section End -->
-
   <!--Contact Section START-->
   <section class="contact section" id="contact" data-aos="fade-up">
     <div class="container">
       <div class="row">
-        <div class="section-title padd-15" data-aos="fade-up">
+        <div class="section-title" data-aos="fade-up">
           <h2>Contact Me</h2>
         </div>
       </div>
-      <h3 class="contact-title" data-aos="fade-up">
+      <h3 class="contact-title" data-aos="fade-left">
         Have You Any Questions ?
       </h3>
-      <h4 class="contact-sub-title" data-aos="fade-up">I'm Your Service</h4>
+      <h4 class="contact-sub-title" data-aos="fade-right">I'm Your Service</h4>
       <div class="row">
         <!-- Contact Info Item END-->
       </div>
-      <h3 class="contact-title padd-15" data-aos="fade-up">
+      <h3 class="contact-title padd-15" data-aos="fade-left">
         Send me an Email
       </h3>
-      <h4 class="contact-sub-title" data-aos="fade-up">
+      <h4 class="contact-sub-title" data-aos="fade-right">
         I'm very responsive
       </h4>
       <!-- Contact Form -->
@@ -217,26 +215,26 @@
             <div class="row">
               <div class="form-item col-6 padd-15">
                 <div class="form-group">
-                  <input type="text" id="name" name="from_name" class="form-control" placeholder="Name" />
+                  <input type="text" id="name" name="from_name" class="form-control" placeholder="Name" data-aos="fade-right"/>
                 </div>
               </div>
               <div class="form-item col-6 padd-15">
                 <div class="form-group">
-                  <input type="email" id="email" name="from_email" class="form-control" placeholder="Email" />
+                  <input type="email" id="email" name="from_email" class="form-control" placeholder="Email" data-aos="fade-left" />
                 </div>
               </div>
             </div>
             <div class="row">
               <div class="form-item col-12 padd-15">
                 <div class="form-group">
-                  <input type="text" id="subject" name="subject" class="form-control" placeholder="Subject" />
+                  <input type="text" id="subject" name="subject" class="form-control" placeholder="Subject" data-aos="fade-up" />
                 </div>
               </div>
             </div>
             <div class="row">
               <div class="form-item col-12 padd-15">
                 <div class="form-group">
-                  <textarea id="message" name="message" class="form-control" placeholder="Message"></textarea>
+                  <textarea id="message" name="message" class="form-control" placeholder="Message" data-aos="fade-up"></textarea>
                 </div>
               </div>
             </div>
@@ -250,8 +248,8 @@
         </div>
       </form>
   </section>
-   <!-- Start of Footer -->
-  <footer>
+  <!-- Start of Footer -->
+  <footer class="bg-gray-900 text-white py-10 text-center" data-aos="fade-up">
     <div class="footer copyright">
       <p>Copyright &copy; 2025 ABPExMoemtaz</p>
     </div>
@@ -275,14 +273,17 @@
   <script src="js/main.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
   <!--Contact Section END-->
+  <!--Aos JS-->
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      duration: 800,
+      once: true
+    });
+  </script>
   <!-- Feather Icon -->
   <script>
     feather.replace();
-  </script>
-  <!-- AOS JS -->
-  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
-    <script>
-      AOS.init();
   </script>
 </body>
 
