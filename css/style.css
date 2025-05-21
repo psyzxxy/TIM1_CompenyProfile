@@ -574,14 +574,14 @@ footer .social-media li a {
     flex: 0 0 100%;
     max-width: 100%;
   }
-.row {
+  .row {
     flex-direction: column;
   }
 
   .col-6 {
     width: 100%;
   }
-}
+
   .card {
     height: fit-content;
     height: -moz-max-content;
