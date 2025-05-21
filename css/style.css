@@ -242,7 +242,7 @@ section {
   display: flex;
   align-items: center;
   padding: 1em;
-  font-size: 1rem;
+  font-size: 2rem;
   cursor: pointer;
 }
 
@@ -398,25 +398,17 @@ footer {
   background: linear-gradient(180deg,
       rgba(8, 31, 92, 1) 30%,
       rgba(51, 78, 172, 1) 95%);
-  margin-top: 2.8125rem;
+  margin-top: 3.125rem;
   display: flex;
-  gap: 2.5rem;
-  justify-content: space-between;
+  flex-wrap: wrap;
+  justify-content: space-around;
 }
 
 .footer {
-  width: 30%;
+  width: 45%;
   height: 50vh;
-  min-height: max-content;
   max-height: fit-content;
   height: -moz-fit-content;
-}
-
-footer .copyright p {
-  margin: 0.5rem 2rem;
-  padding: 0.5rem;
-  text-align: center;
-  font-size: 1.25rem;
 }
 
 footer .social-media ul {
@@ -447,7 +439,7 @@ footer .social-media li a {
 .footer.social-media ul {
   display: flex;
   justify-content: center;
-  gap: 15px;
+  gap: 3.125rem;
   padding: 0;
   list-style: none;
 }
@@ -456,17 +448,79 @@ footer .social-media li a {
   display: inline-block;
 }
 
+.footer.address h3 {
+  font-size: 1.25rem;
+}
+
+.footer.address span {
+  font-size: 0.938rem;
+}
+
+.copyright {
+  width: 100%;
+  height: fit-content;
+  height: -moz-max-content;
+  padding: 1rem;
+}
+
+.copyright p {
+  text-align: center;
+  font-size: 1.25rem;
+}
+
 /* Media Queries */
 
+/* 4K Monitor */
+@media screen and (min-width: 1921px) {
+  html {
+    font-size: 200%;
+  }
+
+  .card {
+    height: fit-content;
+    height: -moz-max-content;
+  }
+
+  .footer.social-media ul {
+    gap: 2.344rem;
+  }
+}
+
+
+/* 2K Monitor */
+@media screen and (max-width: 1920px) {
+  html {
+    font-size: 150%;
+  }
+
+  .card {
+    height: fit-content;
+    height: -moz-max-content;
+  }
+
+  .footer.social-media ul {
+    gap: 2.083rem;
+  }
+}
+
 /* Laptop */
-@media (max-width: 1366px) {
+@media screen and (max-width: 1366px) {
   html {
     font-size: 75%;
+  }
+
+  .card {
+    height: fit-content;
+    height: -moz-max-content;
+  }
+
+  .footer.social-media ul {
+    gap: 2.083rem;
   }
 }
 
 /* Tablet */
-@media (max-width: 768px) {
+@media screen and (max-width: 768px) {
   html {
     font-size: 62.5%;
   }
@@ -512,6 +566,11 @@ footer .social-media li a {
     max-width: 100%;
   }
 
+  .card {
+    height: fit-content;
+    height: -moz-max-content;
+  }
+
   footer {
     flex-direction: row;
     justify-content: space-between;
@@ -525,14 +584,23 @@ footer .social-media li a {
 }
 
 /* Handphone */
-@media (max-width: 425px) {
+@media screen and (max-width: 480px) {
   html {
-    font-size: 55%;
+    font-size: 50%;
   }
 
   .card {
     width: 100%;
     max-height: fit-content;
     height: -moz-max-content;
+  }
+
+  footer {
+    flex-direction: column;
+    gap: 2.5rem;
+  }
+
+  .footer {
+    width: 100%;
   }
 }
