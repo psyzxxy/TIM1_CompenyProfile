@@ -138,3 +138,51 @@ window.addEventListener("resize", () => {
     console.log("Large screen");
   }
 });
+
+window.addEventListener("load", () => {
+  const lastVisit = localStorage.getItem("moemtaz_last_reload");
+  const now = new Date().getTime();
+  const oneDay = 24 * 60 * 60 * 1000;
+
+  if (!lastVisit || now - lastVisit > oneDay) {
+    localStorage.setItem("moemtaz_last_reload", now);
+
+    // Tampilkan animasi sebelum reload
+    const overlay = document.getElementById("reloadOverlay");
+    if (overlay) {
+      overlay.classList.add("show");
+    }
+
+    setTimeout(() => {
+      location.reload();
+    }, 600); // animasi selesai dulu
+  }
+});
+
+function setCookie(name, value, days) {
+  const d = new Date();
+  d.setTime(d.getTime() + (days*24*60*60*1000));
+  document.cookie = `${name}=${value};expires=${d.toUTCString()};path=/`;
+}
+
+function getCookie(name) {
+  const match = document.cookie.match(new RegExp(`(^| )${name}=([^;]+)`));
+  return match ? match[2] : null;
+}
+
+window.addEventListener("load", () => {
+  const visited = getCookie("moemtaz_reload");
+
+  if (!visited) {
+    setCookie("moemtaz_reload", "1", 1); // expire dalam 1 hari
+
+    // Animasi lalu reload
+    const overlay = document.getElementById("reloadOverlay");
+    if (overlay) overlay.classList.add("show");
+
+    setTimeout(() => {
+      location.reload();
+    }, 600);
+  }
+});
+
