@@ -208,44 +208,39 @@
         I'm very responsive
       </h4>
       <!-- Contact Form -->
-      <form id="contactForm">
-        <div class="row">
-          <div class="contact-form padd-15" data-aos="zoom-in">
-            <div class="row">
-              <div class="form-item col-6 padd-15">
-                <div class="form-group">
-                  <input type="text" id="name" name="from_name" class="form-control" placeholder="Name" data-aos="fade-right"/>
-                </div>
-              </div>
-              <div class="form-item col-6 padd-15">
-                <div class="form-group">
-                  <input type="email" id="email" name="from_email" class="form-control" placeholder="Email" data-aos="fade-left" />
-                </div>
-              </div>
-            </div>
-            <div class="row">
-              <div class="form-item col-12 padd-15">
-                <div class="form-group">
-                  <input type="text" id="subject" name="subject" class="form-control" placeholder="Subject" data-aos="fade-up" />
-                </div>
-              </div>
-            </div>
-            <div class="row">
-              <div class="form-item col-12 padd-15">
-                <div class="form-group">
-                  <textarea id="message" name="message" class="form-control" placeholder="Message" data-aos="fade-up"></textarea>
-                </div>
-              </div>
-            </div>
-            <div class="row">
-              <div class="form-item col-12 padd-15">
-                <button type="submit" class="cta" data-aos="fade-up">Send Message</button>
-              </div>
-            </div>
-            <p id="statusMessage" style="text-align:center; margin-top: 10px;"></p>
-          </div>
+  <form id="contactForm">
+  <div class="contact-form" data-aos="zoom-in">
+    <div class="row">
+      <!-- Kolom Kiri: Name, Email, Subject -->
+      <div class="form-item col-6">
+        <div class="form-group">
+          <input type="text" id="name" name="from_name" class="form-control" placeholder="Name" />
         </div>
-      </form>
+        <div class="form-group">
+          <input type="email" id="email" name="from_email" class="form-control" placeholder="Email" />
+        </div>
+        <div class="form-group">
+          <input type="text" id="subject" name="subject" class="form-control" placeholder="Subject" />
+        </div>
+      </div>
+
+      <!-- Kolom Kanan: Message -->
+      <div class="form-item col-6">
+        <div class="form-group" style="height: 100%;">
+          <textarea id="message" name="message" class="form-control" placeholder="Message" style="height: 100%; min-height: 150px;"></textarea>
+        </div>
+      </div>
+    </div>
+
+    <!-- Tombol di Tengah -->
+    <div class="row">
+      <div class="form-item col-12">
+        <button type="submit" class="cta" data-aos="fade-up">Send Message</button>
+      </div>
+    </div>
+  </div>
+</form>
+
   </section>
   <!-- Contact Section End -->
   <!-- Start of Footer -->
