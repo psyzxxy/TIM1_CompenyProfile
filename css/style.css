@@ -525,9 +525,9 @@ footer .social-media li a {
 }
 
 /* Handphone */
-@media (max-width: 425px) {
+@media (max-width: 480px) {
   html {
-    font-size: 55%;
+    font-size: 45%;
   }
 
   .card {
