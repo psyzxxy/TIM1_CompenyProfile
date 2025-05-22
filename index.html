@@ -208,39 +208,38 @@
         I'm very responsive
       </h4>
       <!-- Contact Form -->
-  <form id="contactForm">
-  <div class="contact-form" data-aos="zoom-in">
-    <div class="row">
-      <!-- Kolom Kiri: Name, Email, Subject -->
-      <div class="form-item col-6">
-        <div class="form-group">
-          <input type="text" id="name" name="from_name" class="form-control" placeholder="Name" />
+      <form id="contactForm">
+        <div class="contact-form" data-aos="zoom-in">
+          <div class="row">
+            <!-- Kolom Kiri: Name, Email, Subject -->
+            <div class="form-item col-6">
+              <div class="form-group">
+                <input type="text" id="name" name="from_name" class="form-control" placeholder="Name" />
+              </div>
+              <div class="form-group">
+                <input type="email" id="email" name="from_email" class="form-control" placeholder="Email" />
+              </div>
+              <div class="form-group">
+                <input type="text" id="subject" name="subject" class="form-control" placeholder="Subject" />
+              </div>
+            </div>
+            <!-- Kolom Kanan: Message -->
+            <div class="form-item col-6">
+              <div class="form-group" style="height: 100%;">
+                <textarea id="message" name="message" class="form-control" placeholder="Message"
+                  style="height: 100%; min-height: 150px;"></textarea>
+              </div>
+            </div>
+          </div>
+          <!-- Tombol di Tengah -->
+          <div class="row">
+            <div class="form-item col-12">
+              <button type="submit" class="cta" data-aos="fade-up">Send Message</button>
+            </div>
+            <p id="statusMessage" style="text-align:center; margin-top: 10px;"></p>
+          </div>
         </div>
-        <div class="form-group">
-          <input type="email" id="email" name="from_email" class="form-control" placeholder="Email" />
-        </div>
-        <div class="form-group">
-          <input type="text" id="subject" name="subject" class="form-control" placeholder="Subject" />
-        </div>
-      </div>
-
-      <!-- Kolom Kanan: Message -->
-      <div class="form-item col-6">
-        <div class="form-group" style="height: 100%;">
-          <textarea id="message" name="message" class="form-control" placeholder="Message" style="height: 100%; min-height: 150px;"></textarea>
-        </div>
-      </div>
-    </div>
-
-    <!-- Tombol di Tengah -->
-    <div class="row">
-      <div class="form-item col-12">
-        <button type="submit" class="cta" data-aos="fade-up">Send Message</button>
-      </div>
-    </div>
-  </div>
-</form>
-
+      </form>
   </section>
   <!-- Contact Section End -->
   <!-- Start of Footer -->
@@ -263,6 +262,7 @@
       <p>Copyright &copy; 2025 ABPExMoemtaz</p>
     </div>
   </footer>
+  <div id="reloadOverlay" class="fixed inset-0 bg-white opacity-0 pointer-events-none transition-opacity duration-500 z-50"></div>
   <!-- End of Footer -->
   <!-- Scripts -->
   <script src="js/main.js"></script>
