@@ -620,3 +620,18 @@ footer .social-media li a {
     width: 100%;
   }
 }
+
+#reloadOverlay {
+  position: fixed;
+  inset: 0;
+  background-color: white;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.5s ease;
+  z-index: 9999;
+}
+#reloadOverlay.show {
+  opacity: 1;
+  pointer-events: all;
+}
+
