@@ -144,8 +144,12 @@ window.addEventListener("load", () => {
   const now = new Date().getTime();
   const oneDay = 24 * 60 * 60 * 1000;
 
+  // Jangan reload dua kali dalam sesi yang sama
+  if (sessionStorage.getItem("moemtaz_already_reloaded")) return;
+
   if (!lastVisit || now - lastVisit > oneDay) {
     localStorage.setItem("moemtaz_last_reload", now);
+    sessionStorage.setItem("moemtaz_already_reloaded", "true");
 
     // Tampilkan animasi sebelum reload
     const overlay = document.getElementById("reloadOverlay");
@@ -155,9 +159,10 @@ window.addEventListener("load", () => {
 
     setTimeout(() => {
       location.reload();
-    }, 600); // animasi selesai dulu
+    }, 600);
   }
 });
+
 
 function setCookie(name, value, days) {
   const d = new Date();
@@ -173,16 +178,24 @@ function getCookie(name) {
 window.addEventListener("load", () => {
   const visited = getCookie("moemtaz_reload");
 
+  window.addEventListener("load", () => {
+  const visited = getCookie("moemtaz_reload");
+
   if (!visited) {
-    setCookie("moemtaz_reload", "1", 1); // expire dalam 1 hari
+    // Set cookie dulu
+    setCookie("moemtaz_reload", "1", 1); // expires in 1 day
 
-    // Animasi lalu reload
-    const overlay = document.getElementById("reloadOverlay");
-    if (overlay) overlay.classList.add("show");
-
+    // TUNDA beberapa milidetik agar cookie tersimpan
     setTimeout(() => {
-      location.reload();
-    }, 600);
+      const overlay = document.getElementById("reloadOverlay");
+      if (overlay) overlay.classList.add("show");
+
+      setTimeout(() => {
+        location.reload();
+      }, 800); // delay animasi sebelum reload
+    }, 100); // beri delay agar cookie benar-benar tersimpan
   }
+});
+
 });
 
