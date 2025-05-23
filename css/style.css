@@ -360,7 +360,7 @@ input[type="radio"] {
 }
 
 .col-6 {
-  width: 48%;
+  width: 50%;
 }
 
 .col-12 {
@@ -377,6 +377,10 @@ input[type="radio"] {
   box-sizing: border-box;
   transition: border 0.3s;
   color: #010101;
+}
+.form-item .form-group textarea {
+  height: 100%;
+  min-height: 150px;
 }
 
 .form-control::placeholder {
