@@ -60,10 +60,6 @@ body {
 }
 
 .navbar.solid a,
-.navbar.solid .navbar-logo,
-.navbar.solid .navbar-nav a {
-  color: var(--galaxy);
-}
 .navbar.solid .navbar-logo {
   color: white;
 }
