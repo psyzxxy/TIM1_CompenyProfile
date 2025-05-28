@@ -143,8 +143,8 @@ body {
   bottom: 0;
   background: linear-gradient(
     0deg,
-    rgba(8, 31, 92, 1) 30%,
-    rgba(40, 37, 211, 0) 50%
+    rgb(246, 247, 249) 30%,
+    rgba(212, 212, 215, 0) 50%
   );
 }
 
