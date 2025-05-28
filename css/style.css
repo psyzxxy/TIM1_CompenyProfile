@@ -23,8 +23,8 @@ html {
 
 body {
   font-family: "Poppins", "Railway", sans-serif;
-  background-color: var(--galaxy);
-  color: var(--milkyway);
+  background-color: var(--milkyway);
+  color: var(--galaxy);
 }
 
 /* Navbar */
@@ -141,9 +141,11 @@ body {
   width: 100%;
   height: 30%;
   bottom: 0;
-  background: linear-gradient(0deg,
-      rgba(8, 31, 92, 1) 30%,
-      rgba(40, 37, 211, 0) 50%);
+  background: linear-gradient(
+    0deg,
+    rgba(8, 31, 92, 1) 30%,
+    rgba(40, 37, 211, 0) 50%
+  );
 }
 
 .hero .content {
@@ -231,7 +233,7 @@ section {
   padding: 1rem;
   margin: 1.5rem;
   border-radius: 1rem;
-  background-color: var(--galaxy);
+  background-color: var(--milkyway);
   box-shadow: 6px 6px 10px -1px var(--planetary),
     -6px -6px 10px -1px var(--universe);
 }
@@ -268,13 +270,13 @@ input[type="radio"] {
   transition: max-height 0.75s, padding 0.75s;
 }
 
-.accordion input[type="radio"]:checked+label+.service-content {
+.accordion input[type="radio"]:checked + label + .service-content {
   max-height: fit-content;
   height: -moz-fit-content;
   padding: 1.5rem 1.5rem 2rem;
 }
 
-.accordion input[type="radio"]:checked+label::before {
+.accordion input[type="radio"]:checked + label::before {
   content: "-";
 }
 
@@ -305,14 +307,14 @@ input[type="radio"] {
 }
 
 .contact-title {
-  color: var(--primary);
+  color: var(--galaxy);
   text-align: center;
   font-size: 25px;
   margin-bottom: 20px;
 }
 
 .contact-sub-title {
-  color: var(--milkyway);
+  color: var(--galaxy);
   text-align: center;
   font-size: 15px;
   margin-bottom: 50px;
@@ -322,8 +324,10 @@ input[type="radio"] {
   width: 100%;
   margin: auto;
   padding: 40px 20px;
-  background-color: #061c54;
+  border: var(--galaxy);
   font-family: "Segoe UI", sans-serif;
+  box-shadow: 6px 6px 10px -1px var(--planetary),
+    -6px -6px 10px -1px var(--universe);
 }
 
 .row {
@@ -395,9 +399,11 @@ button.cta:hover {
 
 /* Footer */
 footer {
-  background: linear-gradient(180deg,
-      rgba(8, 31, 92, 1) 30%,
-      rgba(51, 78, 172, 1) 95%);
+  background: linear-gradient(
+    180deg,
+    rgba(8, 31, 92, 1) 30%,
+    rgba(51, 78, 172, 1) 95%
+  );
   margin-top: 3.125rem;
   display: flex;
   flex-wrap: wrap;
