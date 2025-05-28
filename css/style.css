@@ -51,24 +51,27 @@ body {
 
 .navbar.transparent .navbar-nav a,
 .navbar.transparent .navbar-logo {
-  color: var(--universe);
+  color: var(--galaxy);
 }
 
 .navbar.solid {
   background-color: var(--galaxy);
-  border-bottom: 1px solid #785a3b;
+  border-bottom: 1px solid #081f5c;
 }
 
 .navbar.solid a,
 .navbar.solid .navbar-logo,
 .navbar.solid .navbar-nav a {
+  color: var(--galaxy);
+}
+.navbar.solid .navbar-logo {
   color: white;
 }
 
 .navbar .navbar-logo {
   font-size: 2rem;
   font-weight: 700;
-  color: var(--planetary);
+  color: var(--galaxy);
   font-style: italic;
 }
 
@@ -127,7 +130,7 @@ body {
   min-height: 100vh;
   display: flex;
   align-items: center;
-  background-image: url("../assets/images/bkground.jpg");
+  background-image: url("../assets/images/sky.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -155,7 +158,7 @@ body {
 
 .hero .content h1 {
   font-size: 3em;
-  color: var(--planetary);
+  color: var(--galaxy);
   text-shadow: 1px 1px 3px rgba(1, 1, 3, 0.5);
   line-height: 1.2;
 }
@@ -170,7 +173,7 @@ body {
   line-height: 1.4;
   font-weight: 100;
   text-shadow: 1px 1px 3px rgba(1, 1, 3, 0.5);
-  mix-blend-mode: difference;
+  color: var(--galaxy);
 }
 
 .hero .content .cta {
@@ -375,7 +378,7 @@ input[type="radio"] {
 
 /* Tombol button */
 button.cta {
-  background-color: var(--sky);
+  background-color: rgba(51, 78, 172, 1);
   color: #010101;
   border: none;
   padding: 14px 40px;
@@ -534,10 +537,14 @@ footer .social-media li a {
     position: absolute;
     top: 100%;
     right: -100%;
-    background-color: var(--galaxy);
     width: 30rem;
     height: 100vh;
     transition: 0.3s;
+    background-color: rgba(255, 255, 255, 0.05); /* transparansi */
+    backdrop-filter: blur(10px); /* efek blur kaca */
+    -webkit-backdrop-filter: blur(10px); /* Safari */
+    border-left: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: -2px 0 10px rgba(0, 0, 0, 0.2);
   }
 
   .navbar .navbar-nav.active {
@@ -546,6 +553,7 @@ footer .social-media li a {
 
   .navbar .navbar-nav a {
     color: var(--galaxy);
+    text-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
     display: block;
     margin: 1.5rem;
     padding: 0.5rem;
