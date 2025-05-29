@@ -578,10 +578,14 @@ footer .social-media li a {
   }
 
   footer {
-    flex-direction: row;
+    flex-direction: column;
     justify-content: space-between;
-    text-align: left;
+    text-align: center;
     align-items: flex-start;
+    gap: 2.5rem;
+  }
+  .footer {
+    width: 100%;
   }
 
   .footer.social-media {
